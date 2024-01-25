@@ -1,0 +1,13 @@
+ul {
+  display: flex;
+  padding: 0;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+li {
+  list-style-type: none;
+}
+img {
+  width: 500px;
+  height: 350px;
+}
