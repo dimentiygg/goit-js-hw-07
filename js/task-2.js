@@ -30,4 +30,3 @@ const gallery = images
   .map(el => `<li><img src=${el.url} alt='${el.alt}'></li>`)
   .join('');
 menu.insertAdjacentHTML('afterbegin', gallery);
-console.log(menu);
