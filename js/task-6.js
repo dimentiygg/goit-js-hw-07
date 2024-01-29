@@ -14,21 +14,29 @@ function clickHandler() {
 }
 
 createButton.addEventListener('click', function () {
-  createBoxes(clickHandler(), getRandomHexColor());
+  createBoxes(clickHandler());
   input.value = '';
 });
 
-function Destroy() {
+function destroyBoxes() {
   div.innerHTML = '';
+  boxes = [];
+  width = 20;
+  height = 20;
+}
+function clear() {
+  div.innerHTML = '';
+  boxes = [];
 }
 
-destroyButton.addEventListener('click', Destroy);
+destroyButton.addEventListener('click', destroyBoxes);
 
 let boxes = [];
 let width = 20;
 let height = 20;
 function createBoxes(amount) {
   if (amount >= 1 && amount <= 100) {
+    clear();
     for (let i = 0; i < amount; i++) {
       const randomColor = getRandomHexColor();
       boxes.push(document.createElement('div'));
