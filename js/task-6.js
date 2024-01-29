@@ -20,23 +20,18 @@ createButton.addEventListener('click', function () {
 
 function destroyBoxes() {
   div.innerHTML = '';
-  boxes = [];
-  width = 20;
-  height = 20;
-}
-function clear() {
-  div.innerHTML = '';
-  boxes = [];
 }
 
-destroyButton.addEventListener('click', destroyBoxes);
+destroyButton.addEventListener('click', function () {
+  destroyBoxes();
+});
 
-let boxes = [];
-let width = 20;
-let height = 20;
 function createBoxes(amount) {
+  let boxes = [];
+  div.innerHTML = '';
+  let width = 20;
+  let height = 20;
   if (amount >= 1 && amount <= 100) {
-    clear();
     for (let i = 0; i < amount; i++) {
       const randomColor = getRandomHexColor();
       boxes.push(document.createElement('div'));

@@ -27,6 +27,6 @@ const images = [
 
 const menu = document.querySelector('.gallery');
 const gallery = images
-  .map(el => `<li><img src=${el.url} alt='${el.alt}'></li>`)
+  .map(img => `<li><img src=${img.url} alt='${img.alt}'></li>`)
   .join('');
 menu.insertAdjacentHTML('afterbegin', gallery);
